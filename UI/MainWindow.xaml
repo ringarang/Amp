@@ -1,0 +1,49 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="amp" Height="450" Width="350" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" Background="{x:Null}" Icon="ampico1.png">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation From="0" To="1" Duration="00:00:01"
+                                     Storyboard.TargetProperty="(Window.Opacity)"
+                                     AutoReverse="False" RepeatBehavior="1x">
+                        <DoubleAnimation.EasingFunction>
+                            <SineEase EasingMode="EaseInOut"/>
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Border Background="#FF282828" CornerRadius="8">
+        <Grid>
+            <Image VerticalAlignment="Top" RenderOptions.BitmapScalingMode="HighQuality" RenderOptions.EdgeMode="Aliased" HorizontalAlignment="Center" Width="200" Height="200" Source="ampico.png" Margin="0,35,0,0"/>
+            <Border Background="#FF303030" Width="286" Margin="0,0,0,55" VerticalAlignment="Bottom" Padding="0,25,0,40" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="20" Direction="180" Opacity="0.1" ShadowDepth="10" RenderingBias="Quality"/>
+                </Border.Effect>
+                <Grid Height="79">
+                    <TextBox x:Name="textBox" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="19" Height="29" Width="235" TextAlignment="Center" Background="{x:Null}" Foreground="Gainsboro" BorderBrush="#FF00ED92" FontFamily="Segoe UI Semilight" SelectionBrush="#FF00ED92"/>
+                    <PasswordBox x:Name="passwordBox" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="19" Height="29" Width="235" Background="{x:Null}" Foreground="Gainsboro" BorderBrush="#FF00ED92" FontFamily="Segoe UI Semilight" SelectionBrush="#FF00ED92"/>
+                    <Button Content="Login" Width="234" Height="45" Foreground="#FF282828" FontSize="20" FontFamily="Segoe UI Semilight"  BorderBrush="{x:Null}" VerticalAlignment="Bottom" Margin="0,0,0,-65" Style="{DynamicResource btn}" Click="Button_Click"/>
+                </Grid>
+            </Border>
+            <Button x:Name="button" Content="X" HorizontalAlignment="Right" Margin="0,3,3,0" VerticalAlignment="Top" Width="23" Style="{DynamicResource btn}" FontSize="18" Foreground="#FF00ED92" FontFamily="Segoe UI Light" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Cursor="Hand" Click="button_Click_1">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="0.8"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+    </Border>
+</Window>
