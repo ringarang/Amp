@@ -13,3 +13,6 @@ While the method seems complicated, in tl;dr form it is simply replicating the R
 
 # Can I read up on this?
 A vastly more intellectual member of the community known as Louka has a great paper on this method of execution within the ROBLOX scripting environment. It can be found here: https://github.com/the0d3v/LoukaPDF/blob/master/BytecodeConversion.pdf
+
+# License
+You can do whatever you want with this. This was made as a fun little passion project. See UNLICENSE for more details
